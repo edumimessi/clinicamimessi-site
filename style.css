@@ -46,7 +46,7 @@ p { color: var(--text-soft); line-height: 1.8; }
 .nav-links a:hover { color: var(--teal); }
 .nav-links .active { color: var(--teal); }
 .dropdown { position: relative; }
-.dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); box-shadow: var(--shadow-lg); min-width: 220px; padding: 8px 0; z-index: 200; }
+.dropdown-menu { display: none; position: absolute; top: calc(100% + 0px); left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); box-shadow: var(--shadow-lg); min-width: 220px; padding: 8px 0; z-index: 200; }
 .dropdown:hover .dropdown-menu { display: block; }
 .dropdown-menu a { display: block; padding: 10px 20px; font-size: 0.85rem; color: var(--text-soft); transition: background .15s, color .15s; }
 .dropdown-menu a:hover { background: var(--teal-light); color: var(--teal); }
