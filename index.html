@@ -3,10 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psiquiatra em Taubaté SP | Clínica Mimessi — Dr. Eduardo Mimessi</title>
-  <meta name="description" content="Médico com pós-graduação em psiquiatria em Taubaté SP. Dr. Eduardo Mimessi oferece diagnóstico preciso, tratamento personalizado e acompanhamento com suporte digital. Agende sua consulta.">
+  <title>Médico em Saúde Mental em Taubaté SP | Clínica Mimessi — Dr. Eduardo Mimessi</title>
+  <meta name="description" content="Atendimento médico especializado em saúde mental em Taubaté SP. Dr. Eduardo Mimessi oferece diagnóstico criterioso, tratamento personalizado e acompanhamento próximo. Presencial e online.">
   <link rel="canonical" href="https://clinicamimessi.com.br/">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .authority-strip { background: var(--navy); padding: 20px 24px; }
+    .authority-items { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: center; }
+    .authority-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 0.875rem; font-weight: 500; }
+    .authority-item-dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; flex-shrink: 0; }
+    .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .pain-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px 20px; display: flex; gap: 12px; align-items: center; transition: border-color .2s, box-shadow .2s; }
+    .pain-item:hover { border-color: var(--teal); box-shadow: 0 2px 12px rgba(26,110,110,0.1); }
+    .pain-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .pain-item p { font-size: 0.9rem; color: var(--text); margin: 0; font-weight: 500; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 18px 0; font-size: 1rem; font-weight: 500; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Inter', sans-serif; }
+    .faq-q:hover { color: var(--teal); }
+    .faq-arrow { font-size: 1.2rem; transition: transform .2s; flex-shrink: 0; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 0 18px; font-size: 0.9rem; color: var(--text-soft); line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+    .mid-cta { background: var(--teal-light); border-radius: var(--radius); padding: 40px; text-align: center; border: 1px solid rgba(26,110,110,0.15); }
+    .mid-cta h2 { margin-bottom: 12px; font-size: 1.6rem; }
+    .mid-cta p { margin-bottom: 24px; }
+  </style>
 </head>
 <body>
 
@@ -40,28 +63,51 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-tag">Saúde Mental · Taubaté SP</div>
-      <h1>Saúde mental com diagnóstico preciso e cuidado personalizado</h1>
-      <p>Dr. Eduardo Mimessi oferece atendimento psiquiátrico de excelência em Taubaté, com abordagem baseada em evidências, suporte digital e acompanhamento próximo.</p>
+      <div class="hero-tag">Atendimento Particular · Taubaté SP · Online para todo o Brasil</div>
+      <h1>Recupere equilíbrio emocional, foco e qualidade de vida com acompanhamento médico especializado em saúde mental.</h1>
+      <p>Atendimento particular em Taubaté e online para todo o Brasil. Consultas aprofundadas, diagnóstico criterioso e plano terapêutico individualizado.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank">
-          Agendar pelo WhatsApp
-        </a>
-        <a href="sobre.html" class="btn btn-outline">Conheça o Dr. Eduardo</a>
+        <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank">Agendar Consulta pelo WhatsApp</a>
+        <a href="consulta-online.html" class="btn btn-outline">Como Funciona o Tratamento</a>
       </div>
       <div class="hero-badges">
-        <div class="hero-badge">
-          <div class="hero-badge-icon">🏥</div>
-          Atendimento presencial em Taubaté
-        </div>
-        <div class="hero-badge">
-          <div class="hero-badge-icon">💻</div>
-          Consultas online disponíveis
-        </div>
-        <div class="hero-badge">
-          <div class="hero-badge-icon">📱</div>
-          Suporte digital no tratamento
-        </div>
+        <div class="hero-badge"><div class="hero-badge-icon">🏥</div>Presencial em Taubaté</div>
+        <div class="hero-badge"><div class="hero-badge-icon">💻</div>Online para todo o Brasil</div>
+        <div class="hero-badge"><div class="hero-badge-icon">🔒</div>Sigilo absoluto garantido</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="authority-strip">
+    <div class="authority-items">
+      <div class="authority-item"><div class="authority-item-dot"></div>18+ anos de experiência médica</div>
+      <div class="authority-item"><div class="authority-item-dot"></div>Atendimento presencial e online</div>
+      <div class="authority-item"><div class="authority-item-dot"></div>Consultas com tempo adequado</div>
+      <div class="authority-item"><div class="authority-item-dot"></div>Tratamento baseado em evidências</div>
+      <div class="authority-item"><div class="authority-item-dot"></div>Acompanhamento próximo e contínuo</div>
+      <div class="authority-item"><div class="authority-item-dot"></div>Formação Harvard Medical School</div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Identificação</span>
+        <h2 class="section-title">Quando procurar ajuda especializada</h2>
+        <p class="section-subtitle">Você não precisa estar em crise para buscar cuidado. Esses sinais indicam que uma avaliação médica pode fazer diferença.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-item"><div class="pain-icon">😰</div><p>Ansiedade constante e difícil de controlar</p></div>
+        <div class="pain-item"><div class="pain-icon">💓</div><p>Crises de pânico recorrentes</p></div>
+        <div class="pain-item"><div class="pain-icon">😴</div><p>Insônia persistente ou sono não reparador</p></div>
+        <div class="pain-item"><div class="pain-icon">😔</div><p>Tristeza prolongada ou perda de prazer</p></div>
+        <div class="pain-item"><div class="pain-icon">🎯</div><p>Falta de foco, procrastinação crônica</p></div>
+        <div class="pain-item"><div class="pain-icon">🧠</div><p>Suspeita de TDAH não diagnosticado</p></div>
+        <div class="pain-item"><div class="pain-icon">⚡</div><p>Oscilações intensas de humor</p></div>
+        <div class="pain-item"><div class="pain-icon">🔋</div><p>Exaustão mental e esgotamento</p></div>
+      </div>
+      <div style="text-align:center; margin-top: 40px;">
+        <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-teal" target="_blank">Agendar avaliação pelo WhatsApp</a>
       </div>
     </div>
   </section>
@@ -69,31 +115,21 @@
   <section class="section about-strip">
     <div class="container">
       <div class="about-grid">
-        <div class="about-img-placeholder">
-          [Foto do Dr. Eduardo]<br><br>
-          <small>Substitua pela sua foto profissional</small>
+        <div class="about-img-placeholder" style="background:none; padding:0; overflow:hidden;">
+          <img src="EduardoMimessi.png" alt="Dr. Eduardo D'Angelo Mimessi" style="width:100%; height:100%; object-fit:cover; object-position:top; border-radius:var(--radius); display:block;">
         </div>
         <div>
-          <span class="about-tag">Sobre o médico</span>
-          <h2>Dr. Eduardo D'Angelo Mimessi</h2>
-          <p>Médico com pós-graduação em psiquiatria, com atuação no Hospital de Clínicas Antônio Afonso em Taubaté e prática clínica particular. Combina rigor científico com uma abordagem humanizada, acreditando que cada paciente merece um plano de tratamento verdadeiramente individualizado.</p>
-          <p>Único psiquiatra na região do Vale do Paraíba a integrar ferramentas digitais terapêuticas no acompanhamento clínico, oferecendo aos pacientes recursos modernos entre as consultas.</p>
+          <span class="about-tag">Dr. Eduardo D'Angelo Mimessi</span>
+          <h2>Médico com foco em compreender profundamente cada caso</h2>
+          <p>Meu foco não é apenas prescrever medicamentos, mas compreender profundamente cada caso e construir um plano terapêutico sólido e individualizado. Com mais de 18 anos de experiência em saúde mental, medicina intensiva e emergência, trago para o consultório particular uma visão clínica ampla e criteriosa.</p>
+          <p>Cada consulta é conduzida com tempo adequado — sem pressa — para que você se sinta ouvido e compreendido.</p>
           <div class="about-items">
-            <div class="about-item">
-              <div class="about-item-dot"></div>
-              <p>Diagnóstico baseado em evidências e avaliação clínica aprofundada</p>
-            </div>
-            <div class="about-item">
-              <div class="about-item-dot"></div>
-              <p>Atendimento particular sem convênios — qualidade e tempo dedicados a você</p>
-            </div>
-            <div class="about-item">
-              <div class="about-item-dot"></div>
-              <p>Integração de ferramentas digitais no suporte terapêutico</p>
-            </div>
+            <div class="about-item"><div class="about-item-dot"></div><p>Formação pela UNITAU, pós-graduações em psiquiatria e medicina intensiva (UNICAMP)</p></div>
+            <div class="about-item"><div class="about-item-dot"></div><p>Educação continuada em Harvard Medical School e HarvardX (2024–2025)</p></div>
+            <div class="about-item"><div class="about-item-dot"></div><p>Atendimento particular sem convênios — qualidade e atenção que você merece</p></div>
           </div>
           <br>
-          <a href="sobre.html" class="btn btn-teal">Saiba mais sobre minha formação</a>
+          <a href="sobre.html" class="btn btn-teal">Conheça minha trajetória completa</a>
         </div>
       </div>
     </div>
@@ -104,45 +140,25 @@
       <div class="text-center">
         <span class="section-label">Especialidades</span>
         <h2 class="section-title">Áreas de atuação em Taubaté</h2>
-        <p class="section-subtitle">Diagnóstico e tratamento especializado para as principais condições de saúde mental, com abordagem integrada e personalizada.</p>
+        <p class="section-subtitle">Diagnóstico e tratamento especializado para as principais condições de saúde mental.</p>
       </div>
       <div class="cards-grid">
-        <a href="especialidades/depressao.html" class="card">
-          <div class="card-icon">🌿</div>
-          <h3>Depressão</h3>
-          <p>Diagnóstico preciso e tratamento multimodal para depressão leve, moderada e grave.</p>
-          <span class="card-link">Saiba mais →</span>
-        </a>
-        <a href="especialidades/ansiedade.html" class="card">
-          <div class="card-icon">🧘</div>
-          <h3>Ansiedade</h3>
-          <p>Tratamento para TAG, síndrome do pânico, fobia social e outros transtornos de ansiedade.</p>
-          <span class="card-link">Saiba mais →</span>
-        </a>
-        <a href="especialidades/tdah.html" class="card">
-          <div class="card-icon">🎯</div>
-          <h3>TDAH em Adultos</h3>
-          <p>Avaliação e tratamento do déficit de atenção e hiperatividade na vida adulta.</p>
-          <span class="card-link">Saiba mais →</span>
-        </a>
-        <a href="especialidades/transtorno-bipolar.html" class="card">
-          <div class="card-icon">⚖️</div>
-          <h3>Transtorno Bipolar</h3>
-          <p>Acompanhamento de longo prazo para estabilização e qualidade de vida.</p>
-          <span class="card-link">Saiba mais →</span>
-        </a>
-        <a href="especialidades/tea.html" class="card">
-          <div class="card-icon">🔍</div>
-          <h3>TEA</h3>
-          <p>Avaliação médica e suporte ao Transtorno do Espectro Autista em adultos.</p>
-          <span class="card-link">Saiba mais →</span>
-        </a>
-        <a href="consulta-online.html" class="card">
-          <div class="card-icon">💻</div>
-          <h3>Consulta Online</h3>
-          <p>Atendimento por telemedicina para Taubaté, Vale do Paraíba e todo o Brasil.</p>
-          <span class="card-link">Saiba mais →</span>
-        </a>
+        <a href="especialidades/depressao.html" class="card"><div class="card-icon">🌿</div><h3>Depressão</h3><p>Diagnóstico preciso e tratamento multimodal para depressão leve, moderada e grave.</p><span class="card-link">Saiba mais →</span></a>
+        <a href="especialidades/ansiedade.html" class="card"><div class="card-icon">🧘</div><h3>Ansiedade</h3><p>Tratamento para TAG, síndrome do pânico, fobia social e outros transtornos de ansiedade.</p><span class="card-link">Saiba mais →</span></a>
+        <a href="especialidades/tdah.html" class="card"><div class="card-icon">🎯</div><h3>TDAH em Adultos</h3><p>Avaliação e tratamento do déficit de atenção e hiperatividade na vida adulta.</p><span class="card-link">Saiba mais →</span></a>
+        <a href="especialidades/transtorno-bipolar.html" class="card"><div class="card-icon">⚖️</div><h3>Transtorno Bipolar</h3><p>Acompanhamento de longo prazo para estabilização e qualidade de vida.</p><span class="card-link">Saiba mais →</span></a>
+        <a href="especialidades/tea.html" class="card"><div class="card-icon">🔍</div><h3>TEA</h3><p>Avaliação médica e suporte ao Transtorno do Espectro Autista em adultos.</p><span class="card-link">Saiba mais →</span></a>
+        <a href="consulta-online.html" class="card"><div class="card-icon">💻</div><h3>Consulta Online</h3><p>Atendimento por telemedicina para Taubaté, Vale do Paraíba e todo o Brasil.</p><span class="card-link">Saiba mais →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="mid-cta">
+        <h2>Pronto para dar o primeiro passo?</h2>
+        <p>O agendamento é rápido e discreto. Atendimento presencial em Taubaté ou online para todo o Brasil.</p>
+        <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-teal" target="_blank" style="font-size:1rem; padding:16px 36px;">Agendar Consulta pelo WhatsApp</a>
       </div>
     </div>
   </section>
@@ -152,40 +168,41 @@
       <div class="text-center">
         <span class="section-label">Por que escolher</span>
         <h2 class="section-title">O que diferencia a Clínica Mimessi</h2>
-        <p class="section-subtitle">Uma prática clínica que combina excelência médica com recursos modernos de acompanhamento.</p>
       </div>
       <div class="diff-grid">
-        <div class="diff-item">
-          <div class="diff-number">01</div>
-          <h4>Diagnóstico aprofundado</h4>
-          <p>Consultas sem pressa, avaliação clínica completa e histórico detalhado para um diagnóstico correto.</p>
-        </div>
-        <div class="diff-item">
-          <div class="diff-number">02</div>
-          <h4>Tratamento personalizado</h4>
-          <p>Cada paciente é único. Planos de tratamento individualizados, ajustados continuamente.</p>
-        </div>
-        <div class="diff-item">
-          <div class="diff-number">03</div>
-          <h4>Suporte digital</h4>
-          <p>Ferramentas digitais terapêuticas para apoiar o tratamento entre as consultas.</p>
-        </div>
-        <div class="diff-item">
-          <div class="diff-number">04</div>
-          <h4>Presencial + Online</h4>
-          <p>Atendimento no consultório em Taubaté ou por telemedicina, conforme sua necessidade.</p>
-        </div>
+        <div class="diff-item"><div class="diff-number">01</div><h4>Diagnóstico aprofundado</h4><p>Consultas sem pressa. Avaliação clínica completa para um diagnóstico correto e tratamento eficaz.</p></div>
+        <div class="diff-item"><div class="diff-number">02</div><h4>Plano individualizado</h4><p>Cada paciente é único. Planos de tratamento ajustados continuamente conforme sua evolução.</p></div>
+        <div class="diff-item"><div class="diff-number">03</div><h4>Suporte digital</h4><p>Ferramentas digitais terapêuticas para apoiar o tratamento entre as consultas.</p></div>
+        <div class="diff-item"><div class="diff-number">04</div><h4>Discrição total</h4><p>Atendimento particular com sigilo absoluto. Ambiente seguro para falar sobre o que realmente importa.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 780px;">
+      <div class="text-center">
+        <span class="section-label">Dúvidas frequentes</span>
+        <h2 class="section-title">Perguntas sobre o atendimento</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Como funciona a primeira consulta? <span class="faq-arrow">▾</span></button><div class="faq-a">A primeira consulta é dedicada a uma avaliação clínica completa. Com tempo adequado, fazemos um levantamento detalhado da sua história, sintomas, contexto de vida e objetivos. Ao final, você terá clareza sobre o diagnóstico e as opções de tratamento disponíveis.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Quanto tempo dura a consulta? <span class="faq-arrow">▾</span></button><div class="faq-a">A primeira consulta dura em torno de 50 a 60 minutos. As consultas de retorno têm duração menor, variando conforme a necessidade de cada caso.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Faz consulta online? <span class="faq-arrow">▾</span></button><div class="faq-a">Sim. Atendemos por telemedicina pacientes de Taubaté, Vale do Paraíba e de qualquer estado do Brasil. A consulta online tem a mesma qualidade e eficácia clínica da consulta presencial para a grande maioria das condições.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Faz receita digital? <span class="faq-arrow">▾</span></button><div class="faq-a">Sim. Quando necessário, a receita é emitida digitalmente e tem validade em qualquer farmácia do Brasil, incluindo medicamentos controlados (receita especial).</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Trata TDAH em adultos? <span class="faq-arrow">▾</span></button><div class="faq-a">Sim, é uma das especialidades do atendimento. O TDAH em adultos é frequentemente subdiagnosticado. Realizamos avaliação diagnóstica completa e, quando indicado, iniciamos o tratamento farmacológico e orientamos estratégias complementares.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Aceita convênio? <span class="faq-arrow">▾</span></button><div class="faq-a">O atendimento é exclusivamente particular, sem convênios. Isso garante consultas com tempo adequado, sem limitações impostas por operadoras, e total discrição no seu prontuário.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Como agendar? <span class="faq-arrow">▾</span></button><div class="faq-a">O agendamento é feito pelo WhatsApp. Entre em contato, informe seu nome e disponibilidade de horário — respondemos em até 24 horas úteis para confirmar sua consulta.</div></div>
       </div>
     </div>
   </section>
 
   <section class="cta-banner">
     <div class="container">
-      <h2>Pronto para dar o primeiro passo?</h2>
-      <p>Agende sua consulta com o Dr. Eduardo Mimessi em Taubaté. Atendimento presencial ou online, conforme sua preferência.</p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <h2>Cuidar da saúde mental é um ato de responsabilidade.</h2>
+      <p>Agende sua consulta com o Dr. Eduardo Mimessi em Taubaté. Atendimento presencial ou online, com sigilo e atenção que você merece.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
         <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank">Agendar pelo WhatsApp</a>
-        <a href="contato.html" class="btn btn-outline">Ver informações de contato</a>
+        <a href="consulta-online.html" class="btn btn-outline">Consulta Online</a>
       </div>
     </div>
   </section>
@@ -195,8 +212,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo-name">Clínica Mimessi</div>
-          <p>Dr. Eduardo D'Angelo Mimessi<br>Médico com Pós-Graduação em Psiquiatria · CRM SP 121217<br>Taubaté, São Paulo</p>
-          <p class="footer-disclaimer">Atendimento particular · Sem convênios</p>
+          <p>Dr. Eduardo D'Angelo Mimessi<br>Médico com Pós-Graduação em Psiquiatria · CRM SP 121.217<br>Av. Tiradentes, 101, Sala 23 · Taubaté, SP</p>
+          <p class="footer-disclaimer">Atendimento particular · Sem convênios · Sigilo garantido</p>
         </div>
         <div class="footer-col">
           <h4>Especialidades</h4>
@@ -224,22 +241,23 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" aria-label="Falar pelo WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
     document.querySelectorAll('.dropdown > a').forEach(a => {
       a.addEventListener('click', e => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          a.parentElement.classList.toggle('open');
-        }
+        if (window.innerWidth <= 768) { e.preventDefault(); a.parentElement.classList.toggle('open'); }
       });
     });
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
   </script>
 </body>
 </html>
