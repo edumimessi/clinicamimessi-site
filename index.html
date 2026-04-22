@@ -29,6 +29,44 @@
     .mid-cta { background: var(--teal-light); border-radius: var(--radius); padding: 40px; text-align: center; border: 1px solid rgba(26,110,110,0.15); }
     .mid-cta h2 { margin-bottom: 12px; font-size: 1.6rem; }
     .mid-cta p { margin-bottom: 24px; }
+    /* HERO SPLIT */
+    .hero-split { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; background: linear-gradient(135deg, #0f2744 0%, #1a4a7a 100%); }
+    .hero-circles { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+    .hero-circle { position: absolute; border-radius: 50%; border: 1px solid rgba(26,110,110,0.15); top: 50%; left: 25%; transform: translate(-50%,-50%); width: 500px; height: 500px; }
+    .hero-circle-2 { width: 750px; height: 750px; border-color: rgba(26,110,110,0.08); }
+    .hero-split-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 64px; position: relative; z-index: 2; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 32px; }
+    .hero-eyebrow-line { width: 32px; height: 2px; background: #1a6e6e; }
+    .hero-eyebrow span { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #5bbfbf; }
+    .hero-split-h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.2vw, 3rem); font-weight: 600; color: #ffffff; line-height: 1.15; margin-bottom: 24px; }
+    .hero-split-h1 em { font-style: italic; color: #5bbfbf; }
+    .hero-split-sub { font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 380px; margin-bottom: 48px; }
+    .hero-split-actions { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+    .btn-hero-primary { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: transform .2s, box-shadow .2s; box-shadow: 0 8px 32px rgba(37,211,102,0.3); }
+    .btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,0.4); }
+    .btn-hero-secondary { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.55); font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color .2s; }
+    .btn-hero-secondary:hover { color: rgba(255,255,255,0.9); }
+    .btn-hero-secondary::after { content: ' →'; transition: transform .2s; display: inline-block; }
+    .btn-hero-secondary:hover::after { transform: translateX(4px); }
+    .hero-credentials { margin-top: 56px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 32px; }
+    .hero-cred-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 600; color: #ffffff; line-height: 1; }
+    .hero-cred-label { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 4px; line-height: 1.4; }
+    .hero-split-right { position: relative; overflow: hidden; }
+    .hero-split-right::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #0f2744 0%, rgba(15,39,68,0.35) 25%, transparent 55%); z-index: 1; }
+    .hero-split-right::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 35%; background: linear-gradient(transparent, rgba(15,39,68,0.55)); z-index: 1; }
+    .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+    .hero-badge-float { position: absolute; bottom: 40px; right: 32px; z-index: 2; background: rgba(15,39,68,0.88); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 14px 18px; display: flex; align-items: center; gap: 12px; }
+    .hero-badge-icon-box { width: 40px; height: 40px; background: rgba(26,110,110,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .hero-badge-stars { color: #f59e0b; font-size: 0.7rem; margin-bottom: 2px; }
+    .hero-badge-title { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.9); }
+    .hero-badge-sub { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 1px; }
+    @media (max-width: 768px) {
+      .hero-split { grid-template-columns: 1fr; grid-template-rows: auto 70vw; min-height: auto; }
+      .hero-split-left { padding: 56px 24px 40px; }
+      .hero-credentials { gap: 20px; }
+      .hero-split-right::before { background: linear-gradient(to bottom, #0f2744 0%, rgba(15,39,68,0.15) 40%, transparent 70%); }
+      .hero-badge-float { bottom: 16px; right: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -61,23 +99,43 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-tag">Atendimento Particular · Taubaté SP · Online para todo o Brasil</div>
-      <h1>Recupere equilíbrio emocional, foco e qualidade de vida com acompanhamento médico especializado em saúde mental.</h1>
-      <p>Atendimento particular em Taubaté e online para todo o Brasil. Consultas aprofundadas, diagnóstico criterioso e plano terapêutico individualizado.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank">Agendar Consulta pelo WhatsApp</a>
-        <a href="consulta-online.html" class="btn btn-outline">Como Funciona o Tratamento</a>
+  <!-- HERO PREMIUM -->
+  <section class="hero-split">
+    <div class="hero-circles">
+      <div class="hero-circle"></div>
+      <div class="hero-circle hero-circle-2"></div>
+    </div>
+    <div class="hero-split-left">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span>Taubaté · SP · Atendimento Online</span>
       </div>
-      <div class="hero-badges">
-        <div class="hero-badge"><div class="hero-badge-icon">🏥</div>Presencial em Taubaté</div>
-        <div class="hero-badge"><div class="hero-badge-icon">💻</div>Online para todo o Brasil</div>
-        <div class="hero-badge"><div class="hero-badge-icon">🔒</div>Sigilo absoluto garantido</div>
+      <h1 class="hero-split-h1">Saúde mental com <em>diagnóstico preciso</em> e cuidado real.</h1>
+      <p class="hero-split-sub">Dr. Eduardo Mimessi — médico com 18 anos de experiência e formação internacional, oferece atendimento particular aprofundado em Taubaté e online para todo o Brasil.</p>
+      <div class="hero-split-actions">
+        <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn-hero-primary" target="_blank">Agendar pelo WhatsApp</a>
+        <a href="sobre.html" class="btn-hero-secondary">Conheça o Dr. Eduardo</a>
+      </div>
+      <div class="hero-credentials">
+        <div class="hero-cred"><div class="hero-cred-num">18+</div><div class="hero-cred-label">anos de<br>experiência</div></div>
+        <div class="hero-cred"><div class="hero-cred-num">10+</div><div class="hero-cred-label">avaliações<br>5 estrelas</div></div>
+        <div class="hero-cred"><div class="hero-cred-num">Harvard</div><div class="hero-cred-label">Medical<br>School 2024</div></div>
+      </div>
+    </div>
+    <div class="hero-split-right">
+      <img src="EduardoMimessi.png" alt="Dr. Eduardo Mimessi — Médico em Taubaté SP" class="hero-photo">
+      <div class="hero-badge-float">
+        <div class="hero-badge-icon-box">⭐</div>
+        <div>
+          <div class="hero-badge-stars">★★★★★</div>
+          <div class="hero-badge-title">10+ avaliações</div>
+          <div class="hero-badge-sub">Google · 5 estrelas</div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- AUTHORITY STRIP -->
   <div class="authority-strip">
     <div class="authority-items">
       <div class="authority-item"><div class="authority-item-dot"></div>18+ anos de experiência médica</div>
@@ -89,6 +147,7 @@
     </div>
   </div>
 
+  <!-- QUANDO PROCURAR AJUDA -->
   <section class="section">
     <div class="container">
       <div class="text-center">
@@ -112,6 +171,7 @@
     </div>
   </section>
 
+  <!-- SOBRE -->
   <section class="section about-strip">
     <div class="container">
       <div class="about-grid">
@@ -135,6 +195,7 @@
     </div>
   </section>
 
+  <!-- ESPECIALIDADES -->
   <section class="section">
     <div class="container">
       <div class="text-center">
@@ -153,6 +214,7 @@
     </div>
   </section>
 
+  <!-- MID CTA -->
   <section class="section-sm">
     <div class="container">
       <div class="mid-cta">
@@ -163,6 +225,7 @@
     </div>
   </section>
 
+  <!-- DIFERENCIAIS -->
   <section class="section" style="background: var(--off-white);">
     <div class="container">
       <div class="text-center">
@@ -178,6 +241,7 @@
     </div>
   </section>
 
+  <!-- FAQ -->
   <section class="section">
     <div class="container" style="max-width: 780px;">
       <div class="text-center">
@@ -196,6 +260,7 @@
     </div>
   </section>
 
+  <!-- FINAL CTA -->
   <section class="cta-banner">
     <div class="container">
       <h2>Cuidar da saúde mental é um ato de responsabilidade.</h2>
