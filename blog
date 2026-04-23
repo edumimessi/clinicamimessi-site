@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Saúde Mental em Taubaté | Clínica Mimessi — Dr. Eduardo Mimessi</title>
+  <meta name="description" content="Artigos sobre saúde mental escritos pelo Dr. Eduardo Mimessi, médico em Taubaté SP. Ansiedade, depressão, TDAH e muito mais.">
+  <link rel="canonical" href="https://clinicamimessi.com.br/blog.html">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 48px; }
+    .blog-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: box-shadow .2s, transform .2s; text-decoration: none; display: flex; flex-direction: column; }
+    .blog-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .blog-card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+    .blog-tag { font-size: 0.7rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; display: block; }
+    .blog-card h2 { font-size: 1.15rem; color: var(--navy); line-height: 1.4; margin-bottom: 12px; }
+    .blog-card p { font-size: 0.875rem; color: var(--text-soft); line-height: 1.7; flex: 1; }
+    .blog-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .blog-card-author { font-size: 0.75rem; color: var(--gray); }
+    .blog-card-link { font-size: 0.8rem; font-weight: 600; color: var(--teal); }
+    .blog-card-img-placeholder { width: 100%; height: 200px; background: linear-gradient(135deg, var(--navy), var(--teal)); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-name">Clínica Mimessi</span><span class="logo-sub">Dr. Eduardo Mimessi · Medicina em Saúde Mental</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li class="dropdown"><a href="#">Especialidades ▾</a>
+          <div class="dropdown-menu">
+            <a href="especialidades/depressao.html">Depressão</a>
+            <a href="especialidades/ansiedade.html">Ansiedade</a>
+            <a href="especialidades/tdah.html">TDAH em Adultos</a>
+            <a href="especialidades/transtorno-bipolar.html">Transtorno Bipolar</a>
+            <a href="especialidades/tea.html">TEA</a>
+          </div>
+        </li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="consulta-online.html">Consulta Online</a></li>
+        <li><a href="contato.html" class="nav-cta">Agendar consulta</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Blog</div>
+      <h1>Blog de Saúde Mental</h1>
+      <p>Artigos escritos pelo Dr. Eduardo Mimessi para ajudar você a entender melhor a saúde mental e dar o primeiro passo quando necessário.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Artigos recentes</span>
+      <h2 class="section-title">Conteúdo para cuidar da sua saúde mental</h2>
+      <div class="blog-grid">
+        <a href="blog/ansiedade-ou-nervosismo.html" class="blog-card">
+          <div class="blog-card-img-placeholder">🧘</div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Ansiedade</span>
+            <h2>Ansiedade ou nervosismo? Como saber quando é hora de buscar ajuda médica</h2>
+            <p>Todo mundo sente ansiedade em algum momento. Mas quando ela não passa e interfere na sua vida, pode ser sinal de algo que merece atenção médica.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">Dr. Eduardo Mimessi · Taubaté SP</span>
+              <span class="blog-card-link">Ler artigo →</span>
+            </div>
+          </div>
+        </a>
+        <a href="blog/tristeza-ou-depressao.html" class="blog-card">
+          <div class="blog-card-img-placeholder">🌿</div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Depressão</span>
+            <h2>Tristeza ou depressão? Os sinais que muita gente ignora até piorar</h2>
+            <p>Sentir tristeza faz parte da vida. Mas quando ela não passa, rouba a energia e tira o prazer de tudo, pode ser depressão — uma condição médica que tem tratamento.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">Dr. Eduardo Mimessi · Taubaté SP</span>
+              <span class="blog-card-link">Ler artigo →</span>
+            </div>
+          </div>
+        </a>
+        <a href="blog/tdah-adultos.html" class="blog-card">
+          <div class="blog-card-img-placeholder">🎯</div>
+          <div class="blog-card-body">
+            <span class="blog-tag">TDAH</span>
+            <h2>TDAH em adultos: por que tantos casos só são descobertos depois dos 30</h2>
+            <p>Você já foi chamado de "disperso" ou "preguiçoso" a vida toda? Pode ser TDAH não diagnosticado — muito mais comum em adultos do que se imagina.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">Dr. Eduardo Mimessi · Taubaté SP</span>
+              <span class="blog-card-link">Ler artigo →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Tem dúvidas sobre saúde mental?</h2>
+      <p>Além dos artigos, você pode agendar uma consulta para conversar diretamente com o Dr. Eduardo Mimessi em Taubaté ou online.</p>
+      <a href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank">Agendar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo-name">Clínica Mimessi</div><p>Dr. Eduardo D'Angelo Mimessi<br>Médico com Pós-Graduação em Psiquiatria · CRM SP 121.217<br>Av. Tiradentes, 101, Sala 23 · Taubaté, SP</p><p class="footer-disclaimer">Atendimento particular · Sem convênios · Sigilo garantido</p></div>
+        <div class="footer-col"><h4>Especialidades</h4><ul class="footer-links"><li><a href="especialidades/depressao.html">Depressão</a></li><li><a href="especialidades/ansiedade.html">Ansiedade</a></li><li><a href="especialidades/tdah.html">TDAH em Adultos</a></li><li><a href="especialidades/transtorno-bipolar.html">Transtorno Bipolar</a></li><li><a href="especialidades/tea.html">TEA</a></li></ul></div>
+        <div class="footer-col"><h4>Links</h4><ul class="footer-links"><li><a href="sobre.html">Sobre</a></li><li><a href="blog.html">Blog</a></li><li><a href="contato.html">Agendar</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Clínica Mimessi. Todos os direitos reservados.</span><span>Taubaté, SP · Brasil</span></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/551234244999" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));</script>
+</body>
+</html>
