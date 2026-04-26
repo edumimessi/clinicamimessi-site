@@ -381,24 +381,25 @@
 
   </div>
 
-  <script>
-    const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:Dr. Eduardo Mimessi
-N:Mimessi;Eduardo;;;Dr.
-ORG:Clínica Mimessi
-TITLE:Médico
-TEL;TYPE=CELL:+55 12 98866-2393
-TEL;TYPE=WORK:+55 12 3424-4999
-EMAIL:clinicamimessi@gmail.com
-URL:https://clinicamimessi.com.br
-ADR;TYPE=WORK:;;Av. Tiradentes, 101 - Sala 23;Taubaté;SP;;Brasil
-NOTE:Atendimento presencial em Taubaté e online para todo o Brasil.
-END:VCARD`;
+ <script>
+    const vcard = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'FN:Dr. Eduardo Mimessi',
+      'N:Mimessi;Eduardo;;;Dr.',
+      'ORG:Clínica Mimessi',
+      'TITLE:Médico',
+      'TEL;TYPE=CELL:+55 12 98866-2393',
+      'TEL;TYPE=WORK:+55 12 3424-4999',
+      'EMAIL:clinicamimessi@gmail.com',
+      'URL:https://clinicamimessi.com.br',
+      'ADR;TYPE=WORK:;;Av. Tiradentes\\, 101 - Sala 23;Taubaté;SP;;Brasil',
+      'NOTE:Atendimento presencial em Taubaté e online para todo o Brasil.',
+      'END:VCARD'
+    ].join('\r\n');
 
-    const blob = new Blob([vcard], { type: 'text/vcard' });
-    const url = URL.createObjectURL(blob);
-    document.getElementById('vcardBtn').href = url;
+    const encoded = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
+    document.getElementById('vcardBtn').href = encoded;
   </script>
 
 </body>
