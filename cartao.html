@@ -191,6 +191,7 @@
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
     }
     .btn::before {
       content: '';
@@ -324,7 +325,7 @@
 
     <div class="buttons">
 
-      <a class="btn btn-vcard" href="https://raw.githubusercontent.com/edumimessi/clinicamimessi-site/main/eduardo_mimessi.vcf" download="DrEduardoMimessi.vcf">
+      <a class="btn btn-vcard" id="vcardBtn" href="#">
         <div class="btn-icon">👤</div>
         <span class="btn-label">Salvar Contato</span>
         <span class="btn-arrow">→</span>
@@ -377,5 +378,29 @@
     </div>
 
   </div>
+
+  <script>
+    const vcard = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      "FN:Dr. Eduardo D'Angelo Mimessi",
+      "N:Mimessi;Eduardo;D'Angelo;Dr.;",
+      'ORG:Clínica Mimessi',
+      'TITLE:Médico',
+      'TEL;TYPE=WORK,VOICE,CELL:+551234244999',
+      'EMAIL;TYPE=WORK:clinicamimessi@gmail.com',
+      'URL:https://clinicamimessi.com.br',
+      'ADR;TYPE=WORK:;;Av. Tiradentes\\, 101 - Sala 23;Taubaté;SP;12030-180;Brasil',
+      'NOTE:Saúde mental com diagnóstico preciso e cuidado real.',
+      'END:VCARD'
+    ].join('\r\n');
+
+    const btn = document.getElementById('vcardBtn');
+    const blob = new Blob([vcard], { type: 'text/vcard' });
+    const url = URL.createObjectURL(blob);
+    btn.href = url;
+    btn.download = 'DrEduardoMimessi.vcf';
+  </script>
+
 </body>
 </html>
