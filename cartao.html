@@ -11,8 +11,6 @@
       --gold: #C9A96E;
       --gold-light: #E8D5A3;
       --dark: #0B0D12;
-      --dark-2: #13161F;
-      --dark-3: #1C2030;
       --text: #F0EDE8;
       --text-muted: rgba(240,237,232,0.55);
     }
@@ -326,7 +324,7 @@
 
     <div class="buttons">
 
-      <a class="btn btn-vcard" id="vcardBtn" href="#" download="DrEduardoMimessi.vcf">
+      <a class="btn btn-vcard" href="https://raw.githubusercontent.com/edumimessi/clinicamimessi-site/main/eduardo_mimessi.vcf" download="DrEduardoMimessi.vcf">
         <div class="btn-icon">👤</div>
         <span class="btn-label">Salvar Contato</span>
         <span class="btn-arrow">→</span>
@@ -379,28 +377,5 @@
     </div>
 
   </div>
-
- <script>
-    const vcard = [
-      'BEGIN:VCARD',
-      'VERSION:3.0',
-      'FN:Dr. Eduardo Mimessi',
-      'N:Mimessi;Eduardo;;;Dr.',
-      'ORG:Clínica Mimessi',
-      'TITLE:Médico',
-      'TEL;TYPE=CELL:+55 12 98866-2393',
-      'TEL;TYPE=WORK:+55 12 3424-4999',
-      'EMAIL:clinicamimessi@gmail.com',
-      'URL:https://clinicamimessi.com.br',
-      'ADR;TYPE=WORK:;;Av. Tiradentes\\, 101 - Sala 23;Taubaté;SP;;Brasil',
-      'NOTE:Atendimento presencial em Taubaté e online para todo o Brasil.',
-      'END:VCARD'
-    ].join('\r\n');
-
-    const encoded = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
-    document.getElementById('vcardBtn').href = encoded;
-  </script>
-
 </body>
 </html>
-```
