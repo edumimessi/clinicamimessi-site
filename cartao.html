@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Eduardo Mimessi | Cartão Digital</title>
-  <meta name="description" content="Cartão digital do Dr. Eduardo Mimessi - Médico Psiquiatra. Agendamento, Instagram, site oficial e contato." />
+  <meta name="description" content="Cartão digital do Dr. Eduardo Mimessi - Médico. Agendamento, Instagram, site oficial e contato." />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -227,6 +228,17 @@
       transform: translateX(0);
     }
 
+    .btn-vcard {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border: 1px solid rgba(201,169,110,0.6);
+      color: var(--gold);
+    }
+    .btn-vcard::before { background: rgba(201,169,110,0.06); }
+    .btn-vcard .btn-icon {
+      background: rgba(201,169,110,0.15);
+      color: var(--gold);
+    }
+
     .btn-primary {
       background: linear-gradient(135deg, #1a1f2e, #222840);
       border: 1px solid rgba(201,169,110,0.4);
@@ -315,6 +327,12 @@
 
     <div class="buttons">
 
+      <a class="btn btn-vcard" id="vcardBtn" href="#" download="DrEduardoMimessi.vcf">
+        <div class="btn-icon">👤</div>
+        <span class="btn-label">Salvar Contato</span>
+        <span class="btn-arrow">→</span>
+      </a>
+
       <a class="btn btn-whatsapp" href="https://wa.me/551234244999" target="_blank">
         <div class="btn-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -362,5 +380,27 @@
     </div>
 
   </div>
+
+  <script>
+    const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Dr. Eduardo Mimessi
+N:Mimessi;Eduardo;;;Dr.
+ORG:Clínica Mimessi
+TITLE:Médico
+TEL;TYPE=CELL:+55 12 98866-2393
+TEL;TYPE=WORK:+55 12 3424-4999
+EMAIL:clinicamimessi@gmail.com
+URL:https://clinicamimessi.com.br
+ADR;TYPE=WORK:;;Av. Tiradentes, 101 - Sala 23;Taubaté;SP;;Brasil
+NOTE:Atendimento presencial em Taubaté e online para todo o Brasil.
+END:VCARD`;
+
+    const blob = new Blob([vcard], { type: 'text/vcard' });
+    const url = URL.createObjectURL(blob);
+    document.getElementById('vcardBtn').href = url;
+  </script>
+
 </body>
 </html>
+```
