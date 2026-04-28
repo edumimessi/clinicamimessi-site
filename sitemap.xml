@@ -1,48 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://clinicamimessi.com.br/</loc>
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://clinicamimessi.com.br/sobre.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://clinicamimessi.com.br/especialidades/depressao.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://clinicamimessi.com.br/especialidades/ansiedade.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://clinicamimessi.com.br/especialidades/tdah.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://clinicamimessi.com.br/especialidades/transtorno-bipolar.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://clinicamimessi.com.br/especialidades/tea.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://clinicamimessi.com.br/consulta-online.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://clinicamimessi.com.br/contato.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
+
+  <url>
+    <loc>https://clinicamimessi.com.br/blog.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://clinicamimessi.com.br/ia-para-medicos.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://clinicamimessi.com.br/cartao.html</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
 </urlset>
