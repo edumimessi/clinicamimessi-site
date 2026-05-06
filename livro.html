@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logoterapia e Tradições Espirituais — Livro de Dr. Eduardo Mimessi</title>
+  <meta name="description" content="Logoterapia e Tradições Espirituais: Uma Abordagem Espiritualizada para a Busca de Sentido. Livro do Dr. Eduardo D'Angelo Mimessi. Em breve no Kindle.">
+  <link rel="canonical" href="https://clinicamimessi.com.br/livro.html">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .book-hero { background: linear-gradient(135deg, #0B0D12 0%, #0f2744 60%, #1a4a7a 100%); padding: 80px 24px; position: relative; overflow: hidden; }
+    .book-hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(ellipse, rgba(201,169,110,0.08) 0%, transparent 70%); pointer-events: none; }
+    .book-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+    .book-cover-wrap { position: relative; }
+    .book-cover-wrap::before { content: ''; position: absolute; inset: -16px; background: radial-gradient(ellipse, rgba(201,169,110,0.15) 0%, transparent 70%); border-radius: 8px; }
+    .book-cover { width: 100%; border-radius: 6px; box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,169,110,0.2); position: relative; z-index: 1; }
+    .book-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,169,110,0.15); border: 1px solid rgba(201,169,110,0.3); color: #C9A96E; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 16px; border-radius: 50px; margin-bottom: 24px; }
+    .book-hero h1 { font-family: 'Playfair Display', serif; color: #fff; font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.15; margin-bottom: 12px; }
+    .book-hero h1 em { font-style: italic; color: #C9A96E; }
+    .book-subtitle { font-size: 1rem; color: rgba(255,255,255,0.6); margin-bottom: 8px; font-style: italic; }
+    .book-author { font-size: 0.875rem; color: rgba(255,255,255,0.45); margin-bottom: 32px; letter-spacing: 0.05em; }
+    .book-badges { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+    .book-badge { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 16px; font-size: 0.8rem; color: rgba(255,255,255,0.7); }
+    .book-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-kindle { display: inline-flex; align-items: center; gap: 10px; background: #FF9900; color: #fff; padding: 14px 28px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background .2s, transform .2s; box-shadow: 0 8px 24px rgba(255,153,0,0.3); }
+    .btn-kindle:hover { background: #e68900; transform: translateY(-2px); }
+    .btn-notify { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: rgba(255,255,255,0.7); padding: 14px 28px; border-radius: 50px; font-weight: 500; font-size: 0.9rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: all .2s; }
+    .btn-notify:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
+    .book-body { max-width: 860px; margin: 0 auto; padding: 80px 24px; }
+    .book-section { margin-bottom: 64px; }
+    .book-section h2 { font-size: 1.6rem; color: #0f2744; margin-bottom: 20px; }
+    .book-section p { font-size: 1rem; line-height: 1.85; color: #4a5568; margin-bottom: 16px; }
+    .book-topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 24px; }
+    .book-topic { background: #f8f9fb; border: 1px solid #dde3ec; border-radius: 12px; padding: 20px; display: flex; gap: 14px; align-items: flex-start; }
+    .book-topic-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .book-topic h4 { font-size: 0.9rem; color: #0f2744; margin-bottom: 4px; }
+    .book-topic p { font-size: 0.8rem; margin: 0; }
+    .quote-block { background: linear-gradient(135deg, #0f2744, #1a4a7a); border-radius: 16px; padding: 48px 40px; text-align: center; margin: 48px 0; }
+    .quote-block blockquote { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 16px; }
+    .quote-block cite { font-size: 0.8rem; color: #C9A96E; letter-spacing: 0.08em; text-transform: uppercase; }
+    .author-section { display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; background: #f8f9fb; border: 1px solid #dde3ec; border-radius: 16px; padding: 40px; margin: 48px 0; }
+    .author-photo-book { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 12px; }
+    .author-section h3 { font-size: 1.2rem; color: #0f2744; margin-bottom: 8px; }
+    .author-section p { font-size: 0.9rem; color: #4a5568; line-height: 1.7; margin-bottom: 12px; }
+    .buy-section { background: linear-gradient(135deg, #0B0D12, #0f2744); border-radius: 20px; padding: 56px 40px; text-align: center; margin: 48px 0; }
+    .buy-section h2 { color: #fff !important; margin-bottom: 12px; }
+    .buy-section p { color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+    .price-tag { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #C9A96E; font-weight: 600; display: block; margin-bottom: 4px; }
+    .price-label { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 28px; display: block; }
+    @media (max-width: 768px) {
+      .book-hero-inner { grid-template-columns: 1fr; }
+      .book-cover-wrap { max-width: 220px; margin: 0 auto; }
+      .author-section { grid-template-columns: 1fr; }
+      .author-photo-book { max-width: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-name">Clínica Mimessi</span><span class="logo-sub">Dr. Eduardo Mimessi · Medicina em Saúde Mental</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li class="dropdown"><a href="#">Especialidades ▾</a>
+          <div class="dropdown-menu"><a href="especialidades/depressao.html">Depressão</a><a href="especialidades/ansiedade.html">Ansiedade</a><a href="especialidades/tdah.html">TDAH em Adultos</a><a href="especialidades/transtorno-bipolar.html">Transtorno Bipolar</a><a href="especialidades/tea.html">TEA</a></div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="livro.html" class="active">Livro</a></li>
+        <li><a href="consulta-online.html">Consulta Online</a></li>
+        <li><a href="contato.html" class="nav-cta">Agendar consulta</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="book-hero">
+    <div class="book-hero-inner">
+      <div class="book-cover-wrap">
+        <img src="capa_livro.png" alt="Logoterapia e Tradições Espirituais — Dr. Eduardo Mimessi" class="book-cover">
+      </div>
+      <div>
+        <div class="book-tag">📘 Em breve no Kindle</div>
+        <h1>Logoterapia e <em>Tradições Espirituais</em></h1>
+        <p class="book-subtitle">Uma Abordagem Espiritualizada para a Busca de Sentido</p>
+        <p class="book-author">Eduardo D'Angelo Mimessi · 2025</p>
+        <div class="book-badges">
+          <div class="book-badge">📖 eBook Kindle</div>
+          <div class="book-badge">🌍 Disponível mundialmente</div>
+          <div class="book-badge">💛 $7,00 USD</div>
+        </div>
+        <div class="book-actions">
+          <a href="https://wa.me/551234244999?text=Olá,%20tenho%20interesse%20no%20livro%20Logoterapia%20e%20Tradições%20Espirituais.%20Pode%20me%20avisar%20quando%20publicar?" class="btn-notify" target="_blank">📲 Avise-me quando publicar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="book-body">
+
+    <div class="book-section">
+      <h2>Sobre o livro</h2>
+      <p>Este livro nasceu de uma busca pessoal — a de compreender como a espiritualidade pode ser uma ponte para o sentido da vida. Partindo da Logoterapia de Viktor Frankl, uma das abordagens psicológicas mais profundas do século XX, o autor dialoga com diferentes tradições espirituais da humanidade para construir uma visão integradora do sofrimento, do sentido e da cura.</p>
+      <p>Mais do que um livro técnico, é um convite à reflexão. Para médicos, psicólogos, terapeutas e qualquer pessoa que busca compreender a dimensão espiritual da experiência humana — especialmente em momentos de crise, adoecimento ou perda de sentido.</p>
+    </div>
+
+    <div class="quote-block">
+      <blockquote>"Nascido da necessidade de oferecer ferramentas para quem busca sentido além do remédio e além da técnica — para quem acredita que cuidar do ser humano exige também cuidar da sua alma."</blockquote>
+      <cite>Eduardo D'Angelo Mimessi</cite>
+    </div>
+
+    <div class="book-section">
+      <h2>O que você vai encontrar</h2>
+      <div class="book-topics">
+        <div class="book-topic"><div class="book-topic-icon">🌿</div><div><h4>Logoterapia de Viktor Frankl</h4><p>A busca de sentido como força motivadora fundamental da existência humana.</p></div></div>
+        <div class="book-topic"><div class="book-topic-icon">✝️</div><div><h4>Tradições espirituais do mundo</h4><p>Pontes entre o pensamento de Frankl e diferentes tradições religiosas e espirituais.</p></div></div>
+        <div class="book-topic"><div class="book-topic-icon">🧠</div><div><h4>Saúde mental e espiritualidade</h4><p>Como a dimensão espiritual integra-se ao cuidado clínico e psicológico.</p></div></div>
+        <div class="book-topic"><div class="book-topic-icon">🌟</div><div><h4>Busca de sentido na prática</h4><p>Ferramentas para encontrar propósito em momentos de crise e sofrimento.</p></div></div>
+      </div>
+    </div>
+
+    <div class="book-section">
+      <h2>Sobre o autor</h2>
+      <div class="author-section">
+        <img src="EduardoMimessi.png" alt="Dr. Eduardo Mimessi" class="author-photo-book">
+        <div>
+          <h3>Dr. Eduardo D'Angelo Mimessi</h3>
+          <p>Médico com pós-graduação em psiquiatria e mais de 18 anos de experiência em saúde mental. Atua em consultório particular em Taubaté, SP, com atendimento presencial e online para todo o Brasil.</p>
+          <p>Com formação complementar em Harvard Medical School (2024), HarvardX (2025), University of Maryland e University of Canterbury — sempre na interseção entre ciência, saúde mental e espiritualidade.</p>
+          <p>Este livro é resultado de uma jornada pessoal e profissional de busca pela integração entre o rigor científico da psiquiatria e a profundidade das tradições espirituais da humanidade.</p>
+          <a href="sobre.html" class="btn btn-teal" style="margin-top:8px;display:inline-flex;">Conheça a trajetória completa →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="buy-section">
+      <h2>Em breve disponível no Kindle</h2>
+      <p>O livro está em revisão final e será publicado em breve na Amazon Kindle.<br>Quer ser avisado assim que estiver disponível?</p>
+      <span class="price-tag">$7,00</span>
+      <span class="price-label">eBook Kindle · Disponível mundialmente</span>
+      <a href="https://wa.me/551234244999?text=Olá,%20tenho%20interesse%20no%20livro%20Logoterapia%20e%20Tradições%20Espirituais.%20Pode%20me%20avisar%20quando%20publicar?" class="btn-kindle" target="_blank">📲 Quero ser avisado quando publicar</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo-name">Clínica Mimessi</div><p>Dr. Eduardo D'Angelo Mimessi<br>Médico com Pós-Graduação em Psiquiatria · CRM SP 121.217<br>Av. Tiradentes, 101, Sala 23 · Taubaté, SP</p><p class="footer-disclaimer">Atendimento particular · Sem convênios · Sigilo garantido</p></div>
+        <div class="footer-col"><h4>Especialidades</h4><ul class="footer-links"><li><a href="especialidades/depressao.html">Depressão</a></li><li><a href="especialidades/ansiedade.html">Ansiedade</a></li><li><a href="especialidades/tdah.html">TDAH em Adultos</a></li><li><a href="especialidades/transtorno-bipolar.html">Transtorno Bipolar</a></li><li><a href="especialidades/tea.html">TEA</a></li></ul></div>
+        <div class="footer-col"><h4>Links</h4><ul class="footer-links"><li><a href="sobre.html">Sobre</a></li><li><a href="blog.html">Blog</a></li><li><a href="livro.html">Livro</a></li><li><a href="contato.html">Agendar</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Clínica Mimessi. Todos os direitos reservados.</span><span>Taubaté, SP · Brasil</span></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/551234244999" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));</script>
+</body>
+</html>
