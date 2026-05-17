@@ -4,384 +4,434 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Eduardo Mimessi | Cartão Digital</title>
-  <meta name="description" content="Cartão digital do Dr. Eduardo Mimessi - Médico. Agendamento, Instagram, site oficial e contato." />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta name="description" content="Cartão digital do Dr. Eduardo Mimessi - Médico. Salve o contato, agende pelo WhatsApp, acesse o site, Instagram e localização." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gold: #C9A96E;
-      --gold-light: #E8D5A3;
-      --dark: #0B0D12;
-      --text: #F0EDE8;
-      --text-muted: rgba(240,237,232,0.55);
+      --navy: #0b2742;
+      --navy-2: #123f67;
+      --blue: #1e6ea8;
+      --blue-soft: #eaf4fb;
+      --teal: #1b8a8f;
+      --white: #ffffff;
+      --paper: #f7fbff;
+      --text: #172536;
+      --muted: #5f7286;
+      --border: rgba(18, 63, 103, 0.14);
+      --shadow: 0 24px 70px rgba(11, 39, 66, 0.24);
+      --radius: 28px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--dark);
-      color: var(--text);
       min-height: 100vh;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(30, 110, 168, .22), transparent 30%),
+        radial-gradient(circle at 80% 18%, rgba(27, 138, 143, .18), transparent 28%),
+        linear-gradient(145deg, #eaf4fb 0%, #ffffff 48%, #edf7ff 100%);
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 40px 20px 60px;
-      overflow-x: hidden;
+      padding: 28px 14px 44px;
     }
 
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,169,110,0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(201,169,110,0.05) 0%, transparent 60%);
+      background-image:
+        linear-gradient(rgba(11,39,66,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11,39,66,.045) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.55), transparent 70%);
       pointer-events: none;
-      z-index: 0;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      z-index: 1;
+      animation: rise .7s ease both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .brand-strip {
+      text-align: center;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      opacity: .82;
     }
 
     .card {
       position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(255,255,255,.8);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 176px;
+      background:
+        linear-gradient(135deg, rgba(11,39,66,.98), rgba(18,63,103,.92)),
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 36%);
+      z-index: 0;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      right: -70px;
+      width: 190px;
+      height: 190px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 0 0 38px rgba(255,255,255,.045), 0 0 0 76px rgba(255,255,255,.025);
+      z-index: 0;
+    }
+
+    .hero {
+      position: relative;
       z-index: 1;
-      width: 100%;
-      max-width: 400px;
-      animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
+      padding: 28px 24px 22px;
+      text-align: center;
+      color: var(--white);
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .top-rule {
-      display: flex;
+    .mini-label {
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 36px;
-      animation: fadeUp 0.9s 0.1s cubic-bezier(0.16,1,0.3,1) both;
-    }
-    .top-rule::before,
-    .top-rule::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    .top-rule span {
-      font-family: 'Cormorant Garamond', serif;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.16);
       font-size: 11px;
-      letter-spacing: 4px;
+      font-weight: 600;
+      letter-spacing: .08em;
       text-transform: uppercase;
-      color: var(--gold);
-      white-space: nowrap;
+      color: rgba(255,255,255,.88);
+      margin-bottom: 18px;
     }
 
-    .photo-wrap {
-      position: relative;
-      width: 128px;
-      height: 128px;
-      margin: 0 auto 28px;
-      animation: fadeUp 0.9s 0.15s cubic-bezier(0.16,1,0.3,1) both;
-    }
-    .photo-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -4px;
+    .mini-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: conic-gradient(var(--gold) 0deg, transparent 120deg, var(--gold-light) 240deg, transparent 300deg, var(--gold) 360deg);
-      animation: spin 8s linear infinite;
+      background: #8ee5e7;
+      box-shadow: 0 0 0 4px rgba(142,229,231,.16);
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .photo-wrap::after {
-      content: '';
-      position: absolute;
-      inset: -1px;
+
+    .photo-shell {
+      width: 134px;
+      height: 134px;
+      margin: 0 auto 16px;
+      padding: 5px;
       border-radius: 50%;
-      background: var(--dark);
+      background: linear-gradient(135deg, #ffffff, #a9d8f3, #ffffff);
+      box-shadow: 0 16px 34px rgba(0,0,0,.22);
     }
-    .photo-wrap img {
-      position: relative;
-      z-index: 1;
+
+    .photo-shell img {
       width: 100%;
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
       object-position: top center;
+      display: block;
+      border: 4px solid var(--navy);
     }
 
-    .name-block {
-      text-align: center;
-      margin-bottom: 28px;
-      animation: fadeUp 0.9s 0.2s cubic-bezier(0.16,1,0.3,1) both;
-    }
-    .name-block h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 32px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      line-height: 1.1;
-      margin-bottom: 6px;
-      color: var(--text);
-    }
-    .name-block .title {
-      font-size: 10px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 500;
-      margin-top: 6px;
-      margin-bottom: 4px;
-    }
-    .name-block .crm {
-      font-size: 11px;
-      color: var(--text-muted);
-      letter-spacing: 1px;
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(30px, 8vw, 39px);
+      line-height: 1.02;
+      letter-spacing: -.03em;
+      margin-bottom: 8px;
     }
 
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 28px;
-      animation: fadeUp 0.9s 0.25s cubic-bezier(0.16,1,0.3,1) both;
-    }
-    .divider::before, .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(201,169,110,0.25);
-    }
-    .divider-diamond {
-      width: 6px;
-      height: 6px;
-      background: var(--gold);
-      transform: rotate(45deg);
-    }
-
-    .description {
-      text-align: center;
+    .subtitle {
       font-size: 13px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      margin-bottom: 36px;
-      font-weight: 300;
-      padding: 0 8px;
-      animation: fadeUp 0.9s 0.3s cubic-bezier(0.16,1,0.3,1) both;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.78);
+      margin-bottom: 6px;
     }
 
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      animation: fadeUp 0.9s 0.35s cubic-bezier(0.16,1,0.3,1) both;
+    .crm {
+      font-size: 13px;
+      color: rgba(255,255,255,.7);
     }
 
-    .btn {
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 14px 22px 26px;
+    }
+
+    .quote-box {
+      margin: 0 0 18px;
+      padding: 18px 18px;
+      border-radius: 22px;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .quote-box strong {
+      display: block;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      line-height: 1.22;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .quote-box span {
+      display: block;
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .primary-action {
       display: flex;
       align-items: center;
       gap: 14px;
+      width: 100%;
+      padding: 17px 18px;
+      border-radius: 20px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--navy), var(--blue));
       text-decoration: none;
-      padding: 16px 20px;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
+      box-shadow: 0 15px 34px rgba(30,110,168,.32);
+      border: 1px solid rgba(255,255,255,.25);
+      margin-bottom: 14px;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .btn:hover::before { opacity: 1; }
-    .btn:hover { transform: translateX(4px); }
 
-    .btn-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+    .primary-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(30,110,168,.40);
+    }
+
+    .primary-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.15);
+      font-size: 22px;
+      flex: 0 0 auto;
+    }
+
+    .primary-text {
+      text-align: left;
+      flex: 1;
+    }
+
+    .primary-text b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .primary-text small {
+      display: block;
+      font-size: 12px;
+      color: rgba(255,255,255,.76);
+      line-height: 1.35;
+    }
+
+    .arrow { font-size: 20px; opacity: .82; }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .btn {
+      min-height: 58px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 16px;
-    }
-    .btn-label { flex: 1; }
-    .btn-arrow {
-      font-size: 16px;
-      opacity: 0;
-      transform: translateX(-8px);
-      transition: all 0.3s ease;
-      color: var(--gold);
-    }
-    .btn:hover .btn-arrow {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .btn-vcard {
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-      border: 1px solid rgba(201,169,110,0.6);
-      color: var(--gold);
-    }
-    .btn-vcard::before { background: rgba(201,169,110,0.06); }
-    .btn-vcard .btn-icon {
-      background: rgba(201,169,110,0.15);
-      color: var(--gold);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #1a1f2e, #222840);
-      border: 1px solid rgba(201,169,110,0.4);
+      gap: 13px;
+      padding: 13px 15px;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid var(--border);
       color: var(--text);
-    }
-    .btn-primary::before {
-      background: linear-gradient(135deg, rgba(201,169,110,0.08), rgba(201,169,110,0.04));
-    }
-    .btn-primary .btn-icon {
-      background: rgba(201,169,110,0.15);
-      color: var(--gold);
+      text-decoration: none;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
     }
 
-    .btn-whatsapp {
-      background: linear-gradient(135deg, #0d1f18, #0f2820);
-      border: 1px solid rgba(37,211,102,0.25);
-      color: var(--text);
-    }
-    .btn-whatsapp::before { background: rgba(37,211,102,0.05); }
-    .btn-whatsapp .btn-icon {
-      background: rgba(37,211,102,0.12);
-      color: #25D366;
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(30,110,168,.35);
+      background: #fafdff;
     }
 
-    .btn-instagram {
-      background: linear-gradient(135deg, #1a1220, #1f1528);
-      border: 1px solid rgba(225,48,108,0.2);
-      color: var(--text);
+    .btn-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      flex: 0 0 auto;
     }
-    .btn-instagram::before { background: rgba(225,48,108,0.05); }
-    .btn-instagram .btn-icon {
-      background: rgba(225,48,108,0.12);
-      color: #E1306C;
+
+    .btn-icon svg { width: 18px; height: 18px; }
+
+    .btn-label {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -.01em;
     }
+
+    .btn-subtle {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+      font-weight: 500;
+    }
+
+    .button-text { flex: 1; }
+
+    .whatsapp .btn-icon { background: rgba(37,211,102,.12); color: #128C4A; }
+    .instagram .btn-icon { background: rgba(225,48,108,.10); color: #c13584; }
+    .book .btn-icon { background: rgba(201,169,110,.16); color: #8a6b2d; }
 
     .footer {
       text-align: center;
-      margin-top: 40px;
-      animation: fadeUp 0.9s 0.5s cubic-bezier(0.16,1,0.3,1) both;
+      padding: 20px 10px 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
     }
-    .footer-rule {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(201,169,110,0.3), transparent);
-      margin-bottom: 20px;
+
+    .footer b {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 3px;
     }
-    .footer p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 13px;
-      color: var(--text-muted);
-      letter-spacing: 1px;
-      line-height: 1.8;
-      font-style: italic;
-    }
-    .footer .tagline {
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-family: 'Montserrat', sans-serif;
-      font-style: normal;
-      margin-top: 8px;
+
+    @media (max-width: 380px) {
+      body { padding-top: 18px; }
+      .hero { padding-left: 18px; padding-right: 18px; }
+      .content { padding-left: 16px; padding-right: 16px; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <main class="page" aria-label="Cartão digital do Dr. Eduardo Mimessi">
+    <div class="brand-strip">Clínica Mimessi</div>
 
-    <div class="top-rule"><span>Clínica Mimessi</span></div>
+    <section class="card">
+      <header class="hero">
+        <div class="mini-label"><span class="mini-dot"></span> Cartão digital</div>
 
-    <div class="photo-wrap">
-      <img src="https://clinicamimessi.com.br/EduardoMimessi.png" alt="Dr. Eduardo Mimessi" />
-    </div>
-
-    <div class="name-block">
-      <h1>Dr. Eduardo Mimessi</h1>
-      <div class="title">Médico</div>
-      <div class="crm">CRM SP 121.217 · Taubaté, SP</div>
-    </div>
-
-    <div class="divider"><div class="divider-diamond"></div></div>
-
-    <p class="description">
-      Saúde mental com diagnóstico preciso e cuidado real.<br>
-      Atendimento presencial em Taubaté e online para todo o Brasil.
-    </p>
-
-    <div class="buttons">
-
-      <a class="btn btn-vcard" id="vcardBtn" href="#">
-        <div class="btn-icon">👤</div>
-        <span class="btn-label">Salvar Contato</span>
-        <span class="btn-arrow">→</span>
-      </a>
-
-      <a class="btn btn-whatsapp" href="https://wa.me/551234244999" target="_blank">
-        <div class="btn-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
+        <div class="photo-shell">
+          <img src="https://clinicamimessi.com.br/EduardoMimessi.png" alt="Dr. Eduardo Mimessi" />
         </div>
-        <span class="btn-label">Agendar pelo WhatsApp</span>
-        <span class="btn-arrow">→</span>
-      </a>
-<a class="btn btn-primary" href="https://www.amazon.com.br/dp/B0GZXBB5PH" target="_blank">
-  <div class="btn-icon">📘</div>
-  <span class="btn-label">Meu Livro no Kindle</span>
-  <span class="btn-arrow">→</span>
-</a>
-      <a class="btn btn-primary" href="https://clinicamimessi.com.br" target="_blank">
-        <div class="btn-icon">🌐</div>
-        <span class="btn-label">Site Oficial</span>
-        <span class="btn-arrow">→</span>
-      </a>
 
-      <a class="btn btn-instagram" href="https://instagram.com/clinicamimessi" target="_blank">
-        <div class="btn-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-          </svg>
+        <h1>Dr. Eduardo Mimessi</h1>
+        <div class="subtitle">Médico</div>
+        <div class="crm">CRM SP 121.217 · Taubaté, SP</div>
+      </header>
+
+      <div class="content">
+        <div class="quote-box">
+          <strong>Saúde mental com diagnóstico preciso e cuidado real.</strong>
+          <span>Atendimento presencial em Taubaté e online para todo o Brasil.</span>
         </div>
-        <span class="btn-label">Instagram @clinicamimessi</span>
-        <span class="btn-arrow">→</span>
-      </a>
 
-      <a class="btn btn-primary" href="https://maps.google.com/?q=Av.+Tiradentes+101+Sala+23+Taubate+SP" target="_blank">
-        <div class="btn-icon">📍</div>
-        <span class="btn-label">Localização do Consultório</span>
-        <span class="btn-arrow">→</span>
-      </a>
+        <a class="primary-action" id="vcardBtn" href="#">
+          <span class="primary-icon">👤</span>
+          <span class="primary-text">
+            <b>Salvar contato na agenda</b>
+            <small>Baixe o cartão digital do Dr. Eduardo no celular</small>
+          </span>
+          <span class="arrow">→</span>
+        </a>
 
-      <a class="btn btn-primary" href="mailto:clinicamimessi@gmail.com">
-        <div class="btn-icon">✉</div>
-        <span class="btn-label">Enviar E-mail</span>
-        <span class="btn-arrow">→</span>
-      </a>
+        <div class="buttons">
+          <a class="btn whatsapp" href="https://wa.me/551234244999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener">
+            <span class="btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <span class="button-text"><span class="btn-label">Agendar pelo WhatsApp</span><span class="btn-subtle">Falar com a clínica</span></span>
+            <span class="arrow">→</span>
+          </a>
 
-    </div>
+          <a class="btn book" href="https://www.amazon.com.br/dp/B0GZXBB5PH" target="_blank" rel="noopener">
+            <span class="btn-icon">📘</span>
+            <span class="button-text"><span class="btn-label">Meu livro no Kindle</span><span class="btn-subtle">Conheça a publicação</span></span>
+            <span class="arrow">→</span>
+          </a>
 
-    <div class="footer">
-      <div class="footer-rule"></div>
-      <p>Saúde mental com escuta qualificada<br>e cuidado verdadeiramente individualizado.</p>
-      <div class="tagline">Taubaté · SP · Atendimento Online</div>
-    </div>
+          <a class="btn" href="https://clinicamimessi.com.br" target="_blank" rel="noopener">
+            <span class="btn-icon">🌐</span>
+            <span class="button-text"><span class="btn-label">Site oficial</span><span class="btn-subtle">Clínica Mimessi</span></span>
+            <span class="arrow">→</span>
+          </a>
 
-  </div>
+          <a class="btn instagram" href="https://instagram.com/clinicamimessi" target="_blank" rel="noopener">
+            <span class="btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </span>
+            <span class="button-text"><span class="btn-label">Instagram</span><span class="btn-subtle">@clinicamimessi</span></span>
+            <span class="arrow">→</span>
+          </a>
+
+          <a class="btn" href="https://maps.google.com/?q=Av.+Tiradentes+101+Sala+23+Taubate+SP" target="_blank" rel="noopener">
+            <span class="btn-icon">📍</span>
+            <span class="button-text"><span class="btn-label">Localização</span><span class="btn-subtle">Av. Tiradentes, 101 · Sala 23</span></span>
+            <span class="arrow">→</span>
+          </a>
+
+          <a class="btn" href="mailto:clinicamimessi@gmail.com">
+            <span class="btn-icon">✉</span>
+            <span class="button-text"><span class="btn-label">Enviar e-mail</span><span class="btn-subtle">clinicamimessi@gmail.com</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <footer class="footer">
+          <b>Clínica Mimessi</b>
+          Saúde mental com escuta qualificada, sigilo e cuidado individualizado.<br>
+          Taubaté · SP · Atendimento online
+        </footer>
+      </div>
+    </section>
+  </main>
 
   <script>
     const vcard = [
@@ -405,6 +455,5 @@
     btn.href = url;
     btn.download = 'DrEduardoMimessi.vcf';
   </script>
-
 </body>
 </html>
