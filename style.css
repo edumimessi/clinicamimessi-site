@@ -173,12 +173,12 @@ footer { background: var(--navy); padding: 60px 24px 32px; color: rgba(255,255,2
 .footer-inner { max-width: 1100px; margin: 0 auto; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
 .footer-brand .logo-name { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 12px; }
-.footer-brand p { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.55); }
+.footer-brand p { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.72); }
 .footer-col h4 { color: var(--white); font-size: 0.875rem; font-family: 'Inter', sans-serif; margin-bottom: 16px; letter-spacing: 0.05em; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-links a { font-size: 0.875rem; color: rgba(255,255,255,0.55); transition: color .2s; }
+.footer-links a { font-size: 0.875rem; color: rgba(255,255,255,0.72); transition: color .2s; }
 .footer-links a:hover { color: rgba(255,255,255,0.9); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: rgba(255,255,255,0.35); flex-wrap: wrap; gap: 12px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: rgba(255,255,255,0.66); flex-wrap: wrap; gap: 12px; }
 .footer-disclaimer { font-size: 0.75rem; opacity: .7; margin-top: 8px; }
 
 .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.4); transition: transform .2s, box-shadow .2s; }
