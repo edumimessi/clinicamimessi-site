@@ -109,6 +109,18 @@ p { color: var(--text-soft); line-height: 1.8; }
 .diff-item h4 { margin-bottom: 6px; }
 .diff-item p { font-size: 0.875rem; }
 
+.vida-sentido-section { padding: 72px 0; background: var(--white); }
+.vida-sentido-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 56px; padding: 52px 58px; overflow: hidden; position: relative; background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 72%, #24669f 100%); border-radius: 20px; box-shadow: var(--shadow-lg); }
+.vida-sentido-card::before { content: ''; position: absolute; width: 340px; height: 340px; right: -130px; top: -190px; border: 1px solid rgba(255,255,255,.14); border-radius: 50%; }
+.vida-sentido-card::after { content: ''; position: absolute; width: 230px; height: 230px; right: -80px; bottom: -145px; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; }
+.vida-sentido-content { max-width: 680px; position: relative; z-index: 1; }
+.vida-sentido-label { display: block; margin-bottom: 12px; color: #9ed7ff; font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.vida-sentido-card h2 { margin-bottom: 14px; color: var(--white); font-size: clamp(2rem, 4vw, 3.2rem); }
+.vida-sentido-card p { margin: 0; color: rgba(255,255,255,.78); font-size: 1rem; line-height: 1.8; }
+.vida-sentido-link { min-width: 210px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; position: relative; z-index: 1; padding: 15px 24px; background: var(--white); color: var(--navy); border-radius: 50px; font-size: .9rem; font-weight: 700; transition: transform .2s, box-shadow .2s; }
+.vida-sentido-link:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+.vida-sentido-link span { color: var(--blue); font-size: 1.15rem; }
+
 .cta-banner { background: linear-gradient(135deg, var(--navy), var(--teal)); padding: 80px 24px; text-align: center; }
 .cta-banner h2 { color: var(--white); margin-bottom: 16px; }
 .cta-banner p { color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto 36px; }
@@ -198,4 +210,7 @@ footer { background: var(--navy); padding: 60px 24px 32px; color: rgba(255,255,2
   .section { padding: 56px 0; }
   .spec-sidebar { position: static; }
   .sobre-photo-wrap { position: static; }
+  .vida-sentido-section { padding: 48px 0; }
+  .vida-sentido-card { grid-template-columns: 1fr; gap: 28px; padding: 38px 28px; }
+  .vida-sentido-link { width: 100%; }
 }
