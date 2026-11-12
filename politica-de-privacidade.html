@@ -45,9 +45,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="index.html">Home</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="vida-e-sentido.html">Vida e Sentido</a></li>
         <li><a href="contato.html" class="nav-cta">Agendar consulta</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -101,8 +102,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </footer>
-  <script>
-    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-  </script>
+
+  <script src="assets/navigation.js" defer></script>
 </body>
 </html>
+
