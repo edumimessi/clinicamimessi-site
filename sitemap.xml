@@ -132,4 +132,11 @@
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
+  <url>
+    <loc>https://clinicamimessi.com.br/vida-e-sentido.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
+
